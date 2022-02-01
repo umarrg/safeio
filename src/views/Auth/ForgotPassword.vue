@@ -19,7 +19,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <div style="width: 90px; position: absolute; top: 0px">
+    <div style="width: 90px; position: absolute; top: 10px">
       <router-link to="/home">
         <v-img src="../../assets/logo.png"></v-img>
       </router-link>

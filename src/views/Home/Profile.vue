@@ -86,7 +86,7 @@
             </v-card-actions>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn text color="primary" small class="text-capitalize"
+              <v-btn text color="primary" small class="text-capitalize"  to="/"
                 >Logout</v-btn
               >
             </v-card-actions>

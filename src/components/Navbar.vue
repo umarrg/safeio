@@ -2,7 +2,7 @@
   <div class="mb-0">
     <v-app-bar flat color="white" app>
       <router-link to="/home">
-        <img src=".././assets/logo.svg" />
+        <v-img src=".././assets/logo.png" width="100" />
       </router-link>
       <v-spacer></v-spacer>
       <div>
@@ -58,20 +58,6 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-bottom-navigation
-      :value="value"
-      grow
-      class="hidden-md-and-up"
-      app
-      color="primary"
-      height="65px"
-    >
-      <v-btn v-for="item in items" :key="item.icon" :to="item.to" color="">
-        <span>{{ item.text }}</span>
-
-        <v-icon color="">{{ item.icon }}</v-icon>
-      </v-btn>
-    </v-bottom-navigation>
   </div>
 </template>
 
@@ -88,11 +74,12 @@ export default {
       { text: "Home", icon: "mdi-home", to: "/home" },
       {
         text: "Emergency Support",
-        icon: "mdi-calendar-month",
+        icon: "mdi-cannabis",
         to: "/emergency",
       },
       { text: "Chat", icon: "mdi-message", to: "/messages" },
       { text: "Legal Support", icon: "mdi-calendar-check", to: "/legal" },
+      { text: "Session", icon: "mdi-video", to: "/session" },
     ],
   }),
   methods: {

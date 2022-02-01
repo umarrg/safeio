@@ -72,6 +72,16 @@ const routes = [
 
     component: () => import('../views/Legal/index.vue')
   },
+  {
+    path: '/session',
+    name: '',
+    meta: {
+      showHeader: true,
+
+    },
+
+    component: () => import('../views/Session/index.vue')
+  },
 
 
   {

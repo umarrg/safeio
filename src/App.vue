@@ -8,16 +8,19 @@
         <router-view />
       </v-slide-x-transition>
     </v-main>
+        <ButtomNav v-if="$route.meta.showHeader == true" class="hidden-md-and-up" />
   </v-app>
 </template>
 
 <script>
 import NavBar from "./components/Navbar.vue";
 import MobileBack from "./components/Core/Back.vue";
+import ButtomNav from "./components/BottomNav.vue";
 export default {
   components: {
     NavBar,
     MobileBack,
+    ButtomNav
   },
   name: "App",
 

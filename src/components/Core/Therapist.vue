@@ -9,7 +9,7 @@
           <v-btn
             color="white"
             x-large
-            to="/home/selectdate"
+            to="/messages"
             class="custom__btn primary--text text-capitalize mb-3"
             >Select Therapist</v-btn
           >

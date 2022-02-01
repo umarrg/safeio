@@ -13,8 +13,9 @@
           <v-chip
             v-for="item in links"
             :key="item.name"
-            class="mr-5 py-6 px-10"
+            class="mr-5 py-6 px-10 mb-5"
             label
+            :to="item.to"
             width="219px"
             color="#F1F2F4"
           >
@@ -37,9 +38,11 @@ export default {
     links: [
       {
         name: "Emergency support contact ",
+         to: "/emergency",
       },
       {
         name: "Legal Support ",
+        to: "/legal",
       },
       {
         name: "Counselling Support",

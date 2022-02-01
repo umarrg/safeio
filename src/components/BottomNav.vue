@@ -1,5 +1,5 @@
 <template>
-  <v-bottom-navigation :value="value" color="primary" grow fixed>
+  <v-bottom-navigation :value="value" color="primary" grow fixed app>
     <v-btn to="/home">
       <span>Home</span>
 

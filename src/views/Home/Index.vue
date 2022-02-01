@@ -37,15 +37,15 @@ export default {
   data: () => ({
     links: [
       {
-        name: "Emergency support contact ",
-         to: "/emergency",
-      },
-      {
         name: "Legal Support ",
         to: "/legal",
       },
       {
         name: "Counselling Support",
+      },
+      {
+        name: "Emergency support contact ",
+        to: "/emergency",
       },
     ],
   }),

@@ -111,6 +111,26 @@ const routes = [
     component: () => import('../views/Message/Index.vue')
   },
   {
+    path: '/faq',
+    name: 'Messages',
+    meta: {
+      showHeader: true,
+
+    },
+
+    component: () => import('../views/Faq/Index.vue')
+  },
+  {
+    path: '/chat/:id',
+    name: 'Messages',
+    meta: {
+      showHeader: true,
+
+    },
+
+    component: () => import('../views/Chat/Index.vue')
+  },
+  {
     path: '/signup',
     name: 'SignUp',
     meta: {

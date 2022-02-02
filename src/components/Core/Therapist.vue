@@ -1,15 +1,15 @@
 <template>
-  <v-img :src="img" style="border-radius: 10px" contain>
+  <v-img :src="items.img" style="border-radius: 10px" contain>
     <div class="img_div">
       <v-row justify="center" align="center" class="img_div">
         <v-col cols="12" class="d-flex justify-center py-0">
-          <h4 class="white--text">{{ name }}</h4>
+          <h4 class="white--text">{{ items.name }}</h4>
         </v-col>
         <v-col cols="12" class="d-flex justify-center">
           <v-btn
             color="white"
             x-large
-            to="/messages"
+            @click="go(items.id)"
             class="custom__btn primary--text text-capitalize mb-3"
             >Select Therapist</v-btn
           >
@@ -21,8 +21,14 @@
 <script>
 export default {
   props: {
-    img: String,
-    name: String,
+   items: {
+     type: Object
+   }
+  },
+  methods: {
+    go(id) {
+      this.$emit("go", id);
+    },
   },
 };
 </script>

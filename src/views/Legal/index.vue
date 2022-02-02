@@ -9,7 +9,7 @@
           <Title name="Choose a  Lawyer" />
         </v-col>
         <v-col cols="12" md="4" v-for="item in therapist" :key="item.name">
-          <therapist :img="item.img" :name="item.name" />
+          <therapist :items="item" @go="go" />
         </v-col>
       </v-row>
     </v-container>
@@ -35,26 +35,32 @@ export default {
   data: () => ({
     therapist: [
       {
+        id: 1,
         name: "Barr.Jessica Ahmad",
         img: tr1,
       },
       {
+        id: 2,
         name: "Adetunde Ayo",
         img: tr2,
       },
       {
+        id: 3,
         name: " Mary Ekpenyong",
         img: tr3,
       },
       {
+        id: 4,
         name: "Ime Jeremiah",
         img: tr4,
       },
       {
+        id: 5,
         name: "Rosemary Okafor",
         img: tr5,
       },
       {
+        id: 6,
         name: "Ibrahim Muhammed (phd)",
         img: tr6,
       },
@@ -63,6 +69,9 @@ export default {
   methods: {
     back() {
       this.$router.back();
+    },
+    go(id) {
+      this.$router.push("/chat/" + id);
     },
   },
 };

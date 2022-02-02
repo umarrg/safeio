@@ -72,14 +72,20 @@ export default {
     selectedItem: 0,
     items: [
       { text: "Home", icon: "mdi-home", to: "/home" },
+      { text: "Legal Support", icon: "mdi-calendar-check", to: "/legal" },
+
+      { text: "Chat", icon: "mdi-message", to: "/messages" },
+      { text: "Session", icon: "mdi-video", to: "/session" },
+      {
+        text: "Faq",
+        icon: "mdi-help",
+        to: "/faq",
+      },
       {
         text: "Emergency Support",
         icon: "mdi-cannabis",
         to: "/emergency",
       },
-      { text: "Chat", icon: "mdi-message", to: "/messages" },
-      { text: "Legal Support", icon: "mdi-calendar-check", to: "/legal" },
-      { text: "Session", icon: "mdi-video", to: "/session" },
     ],
   }),
   methods: {

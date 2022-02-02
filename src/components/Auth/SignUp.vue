@@ -21,7 +21,7 @@
               type="email"
               outlined
               append-icon="mdi-account"
-              v-model="email"
+              v-model="name"
               @keypress.enter="signUp()"
               height="65"
             ></v-text-field>
@@ -41,15 +41,17 @@
           </v-col>
           <v-col cols="12" md="12" class="py-0">
             <v-text-field
-              placeholder="Phone Number"
+              large
+              :type="showPassword ? 'text' : 'password'"
+              @click:append="showPassword = !showPassword"
               color="primary"
-              :rules="[rules.required]"
-              type="email"
+              :rules="[rules.password, rules.required]"
+              append-icon="mdi-eye"
               outlined
-              append-icon="mdi-account"
-              v-model="number"
-              @keypress.enter="signUp()"
               height="65"
+              placeholder="Password"
+              v-model="password"
+              @keypress.enter="signUp()"
             ></v-text-field>
           </v-col>
           <v-col cols="12" md="12">
@@ -58,7 +60,7 @@
                 block
                 large
                 color="primary"
-                @click="step++"
+                @click="signUp()"
                 elevation="3"
                 height="65"
               >
@@ -103,6 +105,7 @@ export default {
   data: () => ({
     step: 1,
     email: "",
+    name: "",
     password: "",
     isSelecting: false,
     selectedFile: null,
@@ -122,14 +125,16 @@ export default {
   }),
   methods: {
     signUp() {
-      // const signUpData = {
-      //   email: this.email,
-      //   password: this.password,
-      // };
+      const signUpData = {
+        email: this.email,
+        password: this.password,
+        name: this.name,
+      };
       if (this.$refs.form.validate()) {
         // this.$store.dispatch("SIGN_UP", signUpData);
         this.$router.push("/home");
       }
+      console.log(signUpData);
     },
     onFileChanged(e) {
       this.selectedFile = e.target.files[0];
